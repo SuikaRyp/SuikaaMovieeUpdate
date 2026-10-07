@@ -14,12 +14,6 @@
       "request": "launch",
       "type": "dart",
       "args": ["--target-platform", "android-arm64"]
-    },
-    {
-      "name": "SuikaMovie (profile)",
-      "request": "launch",
-      "type": "dart",
-      "flutterMode": "profile"
     }
   ]
 }

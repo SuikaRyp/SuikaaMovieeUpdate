@@ -118,19 +118,6 @@ android {
             else
                 signingConfigs.getByName("debug")
         }
-        // Profile is AOT like release but keeps the VM service, so it can
-        // reproduce a release-only stall AND be inspected. Same release key so
-        // it too installs over the release without an uninstall.
-        // `named` rather than `create`: the Flutter plugin already declares
-        // this build type, and `create` fails as a duplicate. `named` also
-        // dodges the Kotlin `profile` source-set name collision that makes the
-        // `profile {}` sugar resolve to the wrong receiver.
-        named("profile") {
-            signingConfig = if (hasReleaseKeystore)
-                signingConfigs.getByName("debugWithReleaseKey")
-            else
-                signingConfigs.getByName("debug")
-        }
         release {
             signingConfig = if (hasReleaseKeystore)
                 signingConfigs.getByName("release")
@@ -159,6 +146,13 @@ android {
 
 flutter {
     source = "../.."
+}
+
+// Only `debug` and `release` builds are supported. The Flutter plugin always
+// registers a `profile` build type, so switch its tasks off instead of
+// leaving a third variant around.
+tasks.configureEach {
+    if (name.contains("Profile")) enabled = false
 }
 
 // CloudStream plugins built against the pre-release API inline newer kotlinx
