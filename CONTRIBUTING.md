@@ -28,7 +28,7 @@ This repo is the main Zangetsu app (Flutter/Dart, with native `android/` and `io
 
 1. Fork the repo and clone your fork:
    ```bash
-   git clone https://github.com/Spyou/Zangetsu.git
+   git clone https://github.com/SuikaRyp/SuikaaMovieeUpdate.git
    cd Zangetsu
    ```
 2. Make sure you have the **Flutter SDK** installed (check `pubspec.yaml` / `.metadata` for the version this project targets).

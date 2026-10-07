@@ -1,5 +1,4 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
 import '../theme/app_colors.dart';
@@ -29,49 +28,40 @@ class TeamMember {
       (github != null ? 'https://github.com/$github.png?size=200' : '');
 }
 
-/// The curated core team, shown first on the Contributors page with their
-/// specific roles. Everyone else who contributes on GitHub shows up under
-/// "Community Contributors" automatically.
+/// The lead developer, shown first on the Contributors page.
 const List<TeamMember> kCoreTeam = [
   TeamMember(
-    name: 'Spyou',
+    name: 'SuikaRYP',
     role: 'Lead Developer',
-    github: 'spyou',
-    link: 'https://github.com/spyou',
-  ),
-  TeamMember(
-    name: 'NeighborhoodNerd',
-    role: 'Contributor',
-    github: 'neighborhoodnerd',
-    link: 'https://github.com/NeighborhoodNerd',
-  ),
-  TeamMember(
-    name: 'Ombryal',
-    role: 'Discord Head Admin · Contributor',
-    github: 'ombryal',
-    link: 'https://github.com/Ombryal',
+    github: 'SuikaRyp',
+    link: 'https://github.com/SuikaRyp',
   ),
 ];
 
-/// Community contributors we list by hand, ahead of the GitHub-pulled ones.
-/// For people whose work never landed as a commit — art, design — so the
-/// contributors fetch can't find them.
+/// The contributor team, listed by hand.
 const List<TeamMember> kFixedCommunity = [
   TeamMember(
-    name: 'Riyoc',
-    role: 'New logo creator',
-    link: 'https://discord.com/users/1443370547877646447',
+    name: 'yogzoffc',
+    role: 'Contributor',
+    github: 'yogzoffc',
+    link: 'https://github.com/yogzoffc',
+  ),
+  TeamMember(
+    name: 'ObyMoods',
+    role: 'Contributor',
+    github: 'ObyMoods',
+    link: 'https://github.com/ObyMoods',
+  ),
+  TeamMember(
+    name: 'mangyaanzofficial',
+    role: 'Contributor',
+    github: 'mangyaanzofficial',
+    link: 'https://github.com/mangyaanzofficial',
   ),
 ];
 
-/// GitHub logins NOT shown under Community Contributors: the curated core (they
-/// already appear above) and known ghost / bot accounts.
-const Set<String> kExcludedFromCommunity = {
-  'spyou',
-  'ombryal',
-  'neighborhoodnerd',
-  'chatgptkrylor',
-};
+/// No GitHub logins are filtered any more: the community list is hand-listed.
+const Set<String> kExcludedFromCommunity = {'suikaryp'};
 
 /// Map GitHub's `/contributors` payload to community [TeamMember]s: drop the
 /// core + ghost logins and bots, tag everyone else as "Contributor". GitHub
@@ -99,26 +89,9 @@ List<TeamMember> parseCommunity(List<dynamic> json) {
   return out;
 }
 
-/// Fetch the community contributors (everyone on GitHub minus the core team).
-/// Fails soft — an empty list just hides the section's rows.
-// ponytail: unauthenticated GitHub API = 60 req/hr per IP; a rarely-opened
-// credits page won't get near that, so no caching.
-Future<List<TeamMember>> fetchCommunity() async {
-  try {
-    final resp = await Dio().get<List<dynamic>>(
-      'https://api.github.com/repos/Spyou/Zangetsu/contributors',
-      queryParameters: const {'per_page': 100, 'anon': 0},
-      options: Options(
-        responseType: ResponseType.json,
-        sendTimeout: const Duration(seconds: 8),
-        receiveTimeout: const Duration(seconds: 8),
-      ),
-    );
-    return parseCommunity(resp.data ?? const []);
-  } catch (_) {
-    return const [];
-  }
-}
+/// Community contributors are hand-listed in [kFixedCommunity]; nothing is
+/// pulled from GitHub any more.
+Future<List<TeamMember>> fetchCommunity() async => const [];
 
 /// Circular avatar for a contributor — GitHub/explicit image with the name's
 /// initial as the fallback.

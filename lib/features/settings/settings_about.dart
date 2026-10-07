@@ -14,10 +14,9 @@ class AboutSettingsScreen extends StatefulWidget {
 }
 
 class _AboutSettingsScreenState extends State<AboutSettingsScreen> {
-  static const String _websiteUrl = 'https://zangetsu.online';
-  static const String _telegramUrl = 'https://t.me/+9mQlsdvDlo83Mjk1';
-  static const String _discordUrl = kDiscordInviteUrl;
-  static const String _githubUrl = 'https://github.com/Spyou/Zangetsu';
+  static const String _telegramUrl = 'https://t.me/suikainfo';
+  static const String _whatsappUrl =
+      'https://whatsapp.com/channel/0029VbDIlIVFnSzEiKLZ6P0h';
 
   final UpdateService _updateService = UpdateService();
   bool _betaUpdates = false;
@@ -66,28 +65,16 @@ class _AboutSettingsScreenState extends State<AboutSettingsScreen> {
           SettingsCard(
             children: [
               SettingsTile(
-                icon: Icons.language_rounded,
-                title: context.l10n.website,
-                subtitle: 'zangetsu.online',
-                onTap: () => _open(_websiteUrl),
-              ),
-              SettingsTile(
                 icon: Icons.send_rounded,
                 title: context.l10n.telegram,
-                subtitle: context.l10n.communityChat,
+                subtitle: 'Komunitas Suika',
                 onTap: () => _open(_telegramUrl),
               ),
               SettingsTile(
-                icon: Icons.discord,
-                title: context.l10n.discord,
-                subtitle: context.l10n.joinTheServer,
-                onTap: () => _open(_discordUrl),
-              ),
-              SettingsTile(
-                icon: Icons.code_rounded,
-                title: context.l10n.github,
-                subtitle: context.l10n.viewTheSourceCode,
-                onTap: () => _open(_githubUrl),
+                icon: Icons.chat_rounded,
+                title: 'WhatsApp',
+                subtitle: 'Saluran Suika',
+                onTap: () => _open(_whatsappUrl),
               ),
             ],
           ),
@@ -131,12 +118,6 @@ class _AboutSettingsScreenState extends State<AboutSettingsScreen> {
                     }
                   },
                 ),
-              ),
-              SettingsTile(
-                icon: Icons.favorite_border_rounded,
-                title: context.l10n.supportTheApp,
-                subtitle: context.l10n.buyMeACoffee,
-                onTap: () => _push(const DonateScreen()),
               ),
               if (sl.isRegistered<AppMode>() &&
                   sl<AppMode>().isTv &&
@@ -203,7 +184,7 @@ class _DeveloperRow extends StatelessWidget {
         child: InkWell(
           borderRadius: BorderRadius.circular(14),
           onTap: () async {
-            final uri = Uri.parse('https://github.com/spyou');
+            final uri = Uri.parse('https://github.com/SuikaRyp');
             if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
               await launchUrl(uri, mode: LaunchMode.platformDefault);
             }
@@ -218,8 +199,8 @@ class _DeveloperRow extends StatelessWidget {
             child: Row(
               children: [
                 const TeamAvatar(
-                  url: 'https://github.com/spyou.png?size=200',
-                  name: 'Spyou',
+                  url: 'https://github.com/SuikaRyp.png?size=200',
+                  name: 'SuikaRYP',
                   size: 46,
                 ),
                 const SizedBox(width: 14),
@@ -228,7 +209,7 @@ class _DeveloperRow extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Spyou',
+                        'SuikaRYP',
                         style: AppText.headline.copyWith(
                           color: AppColors.textPrimary,
                           fontWeight: FontWeight.w700,

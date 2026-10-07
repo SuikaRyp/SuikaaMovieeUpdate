@@ -18,7 +18,7 @@ class DiscordConfig {
 
   /// Public square app icon Discord can proxy (same file as the launcher).
   static const String appLogoUrl =
-      'https://cdn.jsdelivr.net/gh/Spyou/Zangetsu@main/assets/icon/app_icon.png';
+      'https://cdn.jsdelivr.net/gh/SuikaRyp/SuikaaMovieeUpdate@main/assets/icon/app_icon.png';
 
   static const String appName = 'SuikaMovie';
 

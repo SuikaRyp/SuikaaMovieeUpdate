@@ -10,12 +10,12 @@
 
 <br/>
 
-[![Latest Release](https://img.shields.io/github/v/release/Spyou/Zangetsu?style=for-the-badge&label=Release&color=FF4D57&logo=github)](https://github.com/Spyou/Zangetsu/releases/latest)
-[![Downloads](https://img.shields.io/github/downloads/Spyou/Zangetsu/total?style=for-the-badge&color=FF4D57&logo=android&logoColor=white)](https://github.com/Spyou/Zangetsu/releases)
-[![Stars](https://img.shields.io/github/stars/Spyou/Zangetsu?style=for-the-badge&color=FF4D57&logo=github)](https://github.com/Spyou/Zangetsu/stargazers)
-[![Forks](https://img.shields.io/github/forks/Spyou/Zangetsu?style=for-the-badge&color=FF4D57&logo=github)](https://github.com/Spyou/Zangetsu/network/members)
-[![License](https://img.shields.io/github/license/Spyou/Zangetsu?style=for-the-badge&color=FF4D57)](LICENSE)
-[![Issues](https://img.shields.io/github/issues/Spyou/Zangetsu?style=for-the-badge&color=FF4D57&logo=github)](https://github.com/Spyou/Zangetsu/issues)
+[![Latest Release](https://img.shields.io/github/v/release/SuikaRyp/SuikaaMovieeUpdate?style=for-the-badge&label=Release&color=FF4D57&logo=github)](https://github.com/SuikaRyp/SuikaaMovieeUpdate/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/SuikaRyp/SuikaaMovieeUpdate/total?style=for-the-badge&color=FF4D57&logo=android&logoColor=white)](https://github.com/SuikaRyp/SuikaaMovieeUpdate/releases)
+[![Stars](https://img.shields.io/github/stars/SuikaRyp/SuikaaMovieeUpdate?style=for-the-badge&color=FF4D57&logo=github)](https://github.com/SuikaRyp/SuikaaMovieeUpdate/stargazers)
+[![Forks](https://img.shields.io/github/forks/SuikaRyp/SuikaaMovieeUpdate?style=for-the-badge&color=FF4D57&logo=github)](https://github.com/SuikaRyp/SuikaaMovieeUpdate/network/members)
+[![License](https://img.shields.io/github/license/SuikaRyp/SuikaaMovieeUpdate?style=for-the-badge&color=FF4D57)](LICENSE)
+[![Issues](https://img.shields.io/github/issues/SuikaRyp/SuikaaMovieeUpdate?style=for-the-badge&color=FF4D57&logo=github)](https://github.com/SuikaRyp/SuikaaMovieeUpdate/issues)
 
 <br/>
 
@@ -28,7 +28,7 @@
 
 <br/>
 
-<a href="https://github.com/Spyou/Zangetsu/releases/latest">
+<a href="https://github.com/SuikaRyp/SuikaaMovieeUpdate/releases/latest">
   <img src="https://img.shields.io/badge/⬇️_DOWNLOAD_ZANGETSU-FF4D57?style=for-the-badge&logo=android&logoColor=white&labelColor=1a1a2e" alt="Download Zangetsu" height="42"/>
 </a>
 &nbsp;
@@ -104,7 +104,7 @@ It focuses on **discovery**, **tracking**, **syncing**, and **personal library m
 
 ## ⬇️ Download
 
-Get the latest version from the **[GitHub Releases](https://github.com/Spyou/Zangetsu/releases/latest)** page.
+Get the latest version from the **[GitHub Releases](https://github.com/SuikaRyp/SuikaaMovieeUpdate/releases/latest)** page.
 
 <div align="center">
 
@@ -181,7 +181,7 @@ Yes — Zangetsu is fully open source under the GPL-3.0 license.
 <details>
 <summary><b>How do I get support or report a bug?</b></summary>
 <br/>
-Join the <a href="https://discord.gg/hey6vz9kg6">Discord server</a> or open an <a href="https://github.com/Spyou/Zangetsu/issues">issue on GitHub</a>.
+Join the <a href="https://discord.gg/hey6vz9kg6">Discord server</a> or open an <a href="https://github.com/SuikaRyp/SuikaaMovieeUpdate/issues">issue on GitHub</a>.
 </details>
 
 ---
@@ -233,14 +233,14 @@ A heartfelt thank you to everyone who has contributed to the development of Zang
 
 <div align="center">
 
-<a href="https://github.com/Spyou/Zangetsu/graphs/contributors">
-  <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/Spyou/Zangetsu?style=for-the-badge&label=Contributors&labelColor=1a1a2e&color=FF4D57" />
+<a href="https://github.com/SuikaRyp/SuikaaMovieeUpdate/graphs/contributors">
+  <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/SuikaRyp/SuikaaMovieeUpdate?style=for-the-badge&label=Contributors&labelColor=1a1a2e&color=FF4D57" />
 </a>
 
 <br/><br/>
 
-<a href="https://github.com/Spyou/Zangetsu/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Spyou/Zangetsu" alt="Contributors"/>
+<a href="https://github.com/SuikaRyp/SuikaaMovieeUpdate/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=SuikaRyp/SuikaaMovieeUpdate" alt="Contributors"/>
 </a>
 
 </div>
@@ -264,11 +264,11 @@ Zangetsu is licensed under the **[GNU GPL-3.0](LICENSE)**. See the included lice
 
 <br/>
 
-[⭐ Star the repository](https://github.com/Spyou/Zangetsu)
+[⭐ Star the repository](https://github.com/SuikaRyp/SuikaaMovieeUpdate)
 &nbsp;&nbsp;•&nbsp;&nbsp;
-[⬇️ Download](https://github.com/Spyou/Zangetsu/releases/latest)
+[⬇️ Download](https://github.com/SuikaRyp/SuikaaMovieeUpdate/releases/latest)
 &nbsp;&nbsp;•&nbsp;&nbsp;
-[🐛 Report an issue](https://github.com/Spyou/Zangetsu/issues)
+[🐛 Report an issue](https://github.com/SuikaRyp/SuikaaMovieeUpdate/issues)
 
 <br/>
 

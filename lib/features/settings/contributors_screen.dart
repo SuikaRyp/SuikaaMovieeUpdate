@@ -18,8 +18,6 @@ class ContributorsScreen extends StatefulWidget {
 }
 
 class _ContributorsScreenState extends State<ContributorsScreen> {
-  late final Future<List<TeamMember>> _community = fetchCommunity();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,41 +40,6 @@ class _ContributorsScreenState extends State<ContributorsScreen> {
               margin: const EdgeInsets.fromLTRB(16, 0, 16, 10),
               children: [_ContributorTile(member: m)],
             ),
-          FutureBuilder<List<TeamMember>>(
-            future: _community,
-            builder: (context, snap) {
-              if (snap.connectionState != ConnectionState.done) {
-                return const Padding(
-                  padding: EdgeInsets.symmetric(vertical: 22),
-                  child: Center(
-                    child: SizedBox(
-                      width: 20,
-                      height: 20,
-                      child: CircularProgressIndicator(strokeWidth: 2),
-                    ),
-                  ),
-                );
-              }
-              final list = snap.data ?? const <TeamMember>[];
-              // "No contributors yet" would contradict the hand-listed rows
-              // sitting right above it, so it only stands in for an empty
-              // section as a whole.
-              if (list.isEmpty) {
-                return kFixedCommunity.isEmpty
-                    ? const _CommunityEmpty()
-                    : const SizedBox.shrink();
-              }
-              return Column(
-                children: [
-                  for (final m in list)
-                    SettingsCard(
-                      margin: const EdgeInsets.fromLTRB(16, 0, 16, 10),
-                      children: [_ContributorTile(member: m)],
-                    ),
-                ],
-              );
-            },
-          ),
         ],
       ),
     );
@@ -141,35 +104,6 @@ class _ContributorTile extends StatelessWidget {
             ),
           ],
         ),
-      ),
-    );
-  }
-}
-
-/// Shown while no one outside the core team has contributed yet.
-class _CommunityEmpty extends StatelessWidget {
-  const _CommunityEmpty();
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(28, 8, 28, 8),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            context.l10n.noCommunityContributorsYet,
-            style: AppText.body.copyWith(color: AppColors.textSecondary),
-          ),
-          const SizedBox(height: 4),
-          Text(
-            context.l10n.openPullRequestOnGitHub,
-            style: AppText.caption.copyWith(
-              color: AppColors.textTertiary,
-              height: 1.4,
-            ),
-          ),
-        ],
       ),
     );
   }
