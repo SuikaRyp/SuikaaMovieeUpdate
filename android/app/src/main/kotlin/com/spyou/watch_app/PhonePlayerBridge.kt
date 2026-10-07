@@ -84,7 +84,7 @@ object PhonePlayerBridge {
                 ?.let { defaults -> i.putExtra(PhonePlayerIntent.EXTRA_SUB_DEFAULTS, defaults.toBooleanArray()) }
             i.putExtra(
                 PhonePlayerIntent.EXTRA_ACCENT,
-                (call.argument<Number>("accentColor") ?: 0xFFFF4D5E.toInt()).toInt(),
+                (call.argument<Number>("accentColor") ?: 0xFF4D8DFF.toInt()).toInt(),
             )
             i.putExtra(
                 PhonePlayerIntent.EXTRA_SW_DECODE,

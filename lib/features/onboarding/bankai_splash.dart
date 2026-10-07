@@ -20,11 +20,21 @@ class BankaiSplash extends StatelessWidget {
   final double size;
 
   @override
-  Widget build(BuildContext context) => SizedBox(
-    width: size,
-    height: size,
-    child: CustomPaint(painter: BankaiPainter(progress)),
-  );
+  Widget build(BuildContext context) {
+    // The SuikaMovie logo eases in: fade + a slight settle from 92% to 100%.
+    final t = _ease(_seg(progress, 0.0, 0.7));
+    return SizedBox(
+      width: size,
+      height: size,
+      child: Opacity(
+        opacity: t,
+        child: Transform.scale(
+          scale: 0.92 + 0.08 * t,
+          child: Image.asset('assets/icon/logo_mark.png', fit: BoxFit.contain),
+        ),
+      ),
+    );
+  }
 }
 
 double _ease(double t) => 1 - math.pow(1 - t, 3).toDouble();
@@ -41,8 +51,8 @@ class BankaiPainter extends CustomPainter {
 
   /// The energy colour. Deliberately the artwork's own red rather than a
   /// dimmer "ember" — the brighter burn is what reads at splash size.
-  static const Color _energy = Color(0xFFF80C19);
-  static const Color _slashRed = Color(0xFFF80C19);
+  static const Color _energy = Color(0xFF1E6BFF);
+  static const Color _slashRed = Color(0xFF1E6BFF);
 
   @override
   void paint(Canvas canvas, Size size) {

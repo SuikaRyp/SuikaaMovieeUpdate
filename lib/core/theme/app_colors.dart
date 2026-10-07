@@ -24,8 +24,8 @@ abstract class AppColors {
   static const textTertiary = Color(0xFF6E6E78);
   static const hairline = Color(0x14FFFFFF);
 
-  /// The original coral-red signature — the default accent.
-  static const Color defaultAccent = Color(0xFFFF4D57);
+  /// The signature blue — the default accent.
+  static const Color defaultAccent = Color(0xFF4D8DFF);
 
   /// The app-wide accent. Runtime-mutable so it can be themed: set once at
   /// startup by [ThemeController] and updated when the user picks a new colour.
@@ -34,7 +34,7 @@ abstract class AppColors {
   static Color accent = defaultAccent;
 
   /// A ~15% tint of [accent] for chips/highlights. Derived so it always tracks
-  /// the chosen accent (was the const `0x26FF4D57`).
+  /// the chosen accent (was the const `0x264D8DFF`).
   static Color get accentSoft => accent.withValues(alpha: 0.15);
 
   /// Bottom-up scrim for art overlays (near-black -> transparent).

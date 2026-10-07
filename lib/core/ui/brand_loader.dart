@@ -49,9 +49,9 @@ class _BrandLoaderState extends State<BrandLoader>
                           decoration: BoxDecoration(
                             gradient: LinearGradient(
                               colors: [
-                                Color(0x00FF4D57),
+                                Color(0x004D8DFF),
                                 AppColors.accent,
-                                Color(0x00FF4D57),
+                                Color(0x004D8DFF),
                               ],
                             ),
                           ),

@@ -27,10 +27,10 @@ class ThemeController {
   /// Bumped whenever the accent changes, so listeners (root app, shell) rebuild.
   static final ValueNotifier<int> revision = ValueNotifier<int>(0);
 
-  /// Selectable accents. First entry is the default coral.
+  /// Selectable accents. First entry is the default blue.
   static const List<(String, Color)> accentPresets = [
-    ('Coral', AppColors.defaultAccent),
-    ('Blue', Color(0xFF4D8DFF)),
+    ('Blue', AppColors.defaultAccent),
+    ('Coral', Color(0xFFFF4D57)),
     ('Violet', Color(0xFF9B6DFF)),
     ('Emerald', Color(0xFF32D583)),
     ('Amber', Color(0xFFFFB020)),

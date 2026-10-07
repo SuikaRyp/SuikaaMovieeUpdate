@@ -499,7 +499,7 @@ object CfWebViewSolver {
 
         val spinner = android.widget.ProgressBar(context)
         spinner.indeterminateTintList =
-            android.content.res.ColorStateList.valueOf(0xFFFF4D57.toInt()) // accent
+            android.content.res.ColorStateList.valueOf(0xFF4D8DFF.toInt()) // accent
         val slp = android.widget.LinearLayout.LayoutParams(dp(18), dp(18))
         slp.marginEnd = dp(12)
         chip.addView(spinner, slp)
